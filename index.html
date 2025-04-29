@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>Sorting visualizer</title>
+</head>
+
+<body>
+  <div class="title-bar">
+    <h2 class="title" onclick="window.location.reload()">SORT-CRAFT</h2>
+  </div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <ul class="sort-list"><link rel="stylesheet" href="./css/zoom-tweaks.css" />
+        <li data-sort="bubble">Bubble Sort</li>
+        <li data-sort="selection">Selection Sort</li>
+        <li data-sort="insertion">Insertion Sort</li>
+        <li data-sort="merge">Merge Sort</li>
+        <li data-sort="quick">Quick Sort</li>
+        <li data-sort="heap">Heap Sort</li>
+        <li data-sort="shell">Shell Sort</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <div class="center">
+        <!-- Inputs Box -->
+        <div class="inputs-box">
+          <h3>INPUTS</h3>
+          <div class="input-group">
+            <label for="array-size">Array size:</label>
+            <select id="array-size" class="size-menu">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="speed">Speed:</label>
+            <select id="speed" class="speed-menu">
+              <option value="0.5">0.50x</option>
+              <option value="0.75">0.75x</option>
+              <option value="1" selected>1.00x</option>
+              <option value="1.5">1.50x</option>
+              <option value="2">2.00x</option>
+            </select>
+          </div>
+          <div class="button-container">
+            <button class="btn generate-btn" id="random">Generate Array</button>
+            <button class="btn run-btn" id="start">Run</button>
+          </div>
+        </div>
+
+        <!-- Visualization Box -->
+        <div class="visualize-box">
+          <h3>VISUALIZE </h3>
+          <div class="array-container">
+            <div class="array" id="chart-area"></div>
+          </div>
+        </div>
+
+        <!-- Info Boxes -->
+        <div class="info-container">
+          <div class="info-box description-box">
+            <h3>DESCRIPTION</h3>
+            <div class="info-content" id="sort-description">
+              Select a sorting algorithm to see its description.
+            </div>
+          </div>
+          <div class="info-box complexity-box">
+            <h3>COMPLEXITY</h3>
+            <div class="info-content" id="sort-complexity">
+              Select a sorting algorithm to see its time and space complexity.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div>
+      <a href="https://www.linkedin.com/in/s-harshavardhan-a725332b0/" target="_blank" class="link">
+        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+      </a>
+      <a href="https://github.com/Harsha-348" target="_blank" class="link">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="copyright">
+      © 2025 Harsha — All rights reserved
+    </div>
+  </footer>
+  <script src="./scripts/helper.js"></script>
+  <script src="./scripts/sort-algorithms.js"></script>
+  <script src="./scripts/app.js"></script>
+</body>
+
+</html>
